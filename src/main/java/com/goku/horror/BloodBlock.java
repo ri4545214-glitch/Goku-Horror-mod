@@ -5,6 +5,7 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
@@ -17,6 +18,6 @@ public class BloodBlock extends Block {
         if (r.nextInt(3) == 0) w.removeBlock(p, false);
     }
     @Override protected VoxelShape getOutlineShape(BlockState st, BlockView w, BlockPos p, net.minecraft.block.ShapeContext c) { return SHAPE; }
-    @Override protected VoxelShape getCollisionShape(BlockState st, BlockView w, BlockPos p, net.minecraft.block.ShapeContext c) { return VoxelShape.empty(); }
+    @Override protected VoxelShape getCollisionShape(BlockState st, BlockView w, BlockPos p, net.minecraft.block.ShapeContext c) { return VoxelShapes.empty(); }
     @Override protected boolean canPlaceAt(BlockState st, WorldView w, BlockPos p) { return Block.sideCoversSmallSquare(w, p.down(), net.minecraft.util.math.Direction.UP); }
 }
