@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "goku",
+  "version": "${version}",
+  "name": "Goku Horror",
+  "description": "Verity-style horror: baby villager Goku and the Blood Villager.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.goku.horror.GokuMod"
+    ],
+    "client": [
+      "com.goku.horror.GokuClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.10",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "license": "MIT",
+  "authors": [
+    "Goku Horror Mod contributors"
+  ]
+}
